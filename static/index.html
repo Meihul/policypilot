@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>PolicyPilot AI</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header class="hero">
+
+<div class="logo">
+
+<div class="logo-box">
+
+<svg
+xmlns="http://www.w3.org/2000/svg"
+width="26"
+height="26"
+fill="none"
+stroke="currentColor"
+stroke-width="2"
+stroke-linecap="round"
+stroke-linejoin="round"
+viewBox="0 0 24 24">
+
+<path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>
+
+<polyline points="14 2 14 8 20 8"/>
+
+</svg>
+
+</div>
+
+<div>
+
+<h2>
+
+PolicyPilot
+
+</h2>
+
+<p>
+
+AI-powered Document Intelligence
+
+</p>
+
+</div>
+
+</div>
+
+<h1>
+
+Understand Policies
+Before You Sign Them
+
+</h1>
+
+<p class="hero-text">
+
+Upload agreements,
+insurance policies,
+contracts and employee handbooks.
+
+Azure AI extracts,
+understands,
+and translates documents instantly.
+
+</p>
+
+<div class="features">
+
+<span>
+
+Document Intelligence
+
+</span>
+
+<span>
+
+Language AI
+
+</span>
+
+<span>
+
+Translator
+
+</span>
+
+</div>
+
+</header>
+<!-- =========================
+     Upload Section
+========================= -->
+
+<section class="upload-section">
+
+    <div class="section-heading">
+
+        <h2>
+
+            Upload Policy Document
+
+        </h2>
+
+        <p>
+
+            PDF Documents • Maximum Size 10 MB
+
+        </p>
+
+    </div>
+
+    <div
+        class="upload-card"
+        id="uploadArea"
+    >
+
+        <input
+    type="file"
+    id="pdfFile"
+    accept="application/pdf,.pdf"
+    hidden
+>
+
+        <div class="upload-icon">
+
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="70"
+                height="70"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                viewBox="0 0 24 24">
+
+                <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>
+
+                <polyline points="14 2 14 8 20 8"/>
+
+                <path d="M12 17V10"/>
+
+                <polyline points="9 13 12 10 15 13"/>
+
+            </svg>
+
+        </div>
+
+        <h3>
+
+            Drag & Drop Your PDF
+
+        </h3>
+
+        <p>
+
+            or click anywhere to browse
+
+        </p>
+
+        <span>
+
+            Supported Format: PDF
+
+        </span>
+
+    </div>
+
+    <div
+        id="selectedFile"
+        class="selected-file"
+    >
+
+        No file selected
+
+    </div>
+
+    <div class="controls">
+
+        <div class="select-wrapper">
+
+            <label>
+
+                Translate To
+
+            </label>
+
+            <select id="language">
+
+                <option value="Hindi">
+
+                    Hindi
+
+                </option>
+
+                <option value="English">
+
+                    English
+
+                </option>
+
+                <option value="French">
+
+                    French
+
+                </option>
+
+                <option value="Spanish">
+
+                    Spanish
+
+                </option>
+
+                <option value="German">
+
+                    German
+
+                </option>
+
+            </select>
+
+        </div>
+
+        <button
+            id="analyzeBtn"
+            type="button"
+        >
+
+            Analyze Policy
+
+        </button>
+
+    </div>
+
+</section>
+<!-- ======================================
+        Loading
+======================================= -->
+
+<section
+    id="loading"
+    class="loading hidden"
+>
+
+    <div class="loader"></div>
+
+    <h2>
+
+        Analyzing Your Document
+
+    </h2>
+
+    <p>
+
+        Azure AI is extracting text,
+        identifying key information,
+        detecting entities,
+        and translating your document.
+
+    </p>
+
+</section>
+
+<!-- ======================================
+        Results
+======================================= -->
+
+<section
+    id="results"
+    class="results hidden"
+>
+
+    <div class="results-header">
+
+        <h2>
+
+            Analysis Results
+
+        </h2>
+
+        <p>
+
+            AI-generated insights from your uploaded document
+
+        </p>
+
+    </div>
+
+    <div class="results-grid">
+
+        <div class="card">
+
+            <h3>
+
+                Detected Language
+
+            </h3>
+
+            <p id="languageDetected">
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>
+
+                Key Phrases
+
+            </h3>
+
+            <div id="keyPhrases">
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h3>
+
+                Named Entities
+
+            </h3>
+
+            <div id="entities">
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h3>
+
+                Translation
+
+            </h3>
+
+            <div id="translation">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card full-width">
+
+        <details>
+
+            <summary>
+
+                Original Extracted Text
+
+            </summary>
+
+            <div id="originalText">
+
+            </div>
+
+        </details>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+        Footer
+======================================= -->
+
+<footer>
+
+    <p>
+
+        Powered by
+
+        <strong>Azure AI Document Intelligence</strong>
+
+        •
+
+        <strong>Azure AI Language</strong>
+
+        •
+
+        <strong>Azure AI Translator</strong>
+
+    </p>
+
+    <p class="copyright">
+
+        © 2026 PolicyPilot AI
+
+    </p>
+
+</footer>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>

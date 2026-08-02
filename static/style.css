@@ -1,0 +1,1066 @@
+/* ==========================================================
+                    PolicyPilot AI
+            Beige • Olive • Burnt Orange Theme
+========================================================== */
+
+/* =========================
+        RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Manrope',sans-serif;
+
+    background:#F5F0E6;
+
+    color:#2F3127;
+
+    min-height:100vh;
+
+}
+
+/* =========================
+        SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#EFE7DA;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#B6AA93;
+
+    border-radius:999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#988A73;
+
+}
+
+/* =========================
+        CONTAINER
+========================= */
+
+.container{
+
+    width:92%;
+
+    max-width:1240px;
+
+    margin:auto;
+
+    padding:55px 0 80px;
+
+}
+
+/* =========================
+        HERO
+========================= */
+
+.hero{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.logo{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:35px;
+
+}
+
+.logo-box{
+
+    width:58px;
+
+    height:58px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:18px;
+
+    background:#ECE3D6;
+
+    color:#5E6B3F;
+
+}
+
+.logo h2{
+
+    font-size:34px;
+
+    font-weight:800;
+
+    letter-spacing:-1px;
+
+}
+
+.logo p{
+
+    color:#777060;
+
+    font-size:14px;
+
+    margin-top:4px;
+
+}
+
+.hero h1{
+
+    font-size:64px;
+
+    font-weight:800;
+
+    line-height:1.08;
+
+    letter-spacing:-2px;
+
+    margin-bottom:25px;
+
+}
+
+.hero-text{
+
+    width:72%;
+
+    margin:auto;
+
+    color:#666154;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+}
+
+/* =========================
+        FEATURE TAGS
+========================= */
+
+.features{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:16px;
+
+}
+
+.features span{
+
+    padding:11px 18px;
+
+    border-radius:999px;
+
+    background:#ECE3D6;
+
+    color:#5E6B3F;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+/* =========================
+      SECTION TITLE
+========================= */
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+.section-heading h2{
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+.section-heading p{
+
+    color:#666154;
+
+}
+
+/* =========================
+      UPLOAD CARD
+========================= */
+
+.upload-card{
+
+    background:#FFFDF9;
+
+    border:2px dashed #D9D0C3;
+
+    border-radius:26px;
+
+    padding:55px 30px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+    box-shadow:
+
+        0 12px 35px rgba(0,0,0,.05);
+
+}
+
+.upload-card:hover{
+
+    border-color:#C97A40;
+
+    transform:translateY(-3px);
+
+    background:#FFF8F1;
+
+}
+
+.upload-card.dragover{
+
+    border-color:#5E6B3F;
+
+    background:#F3F0E9;
+
+}
+
+.upload-icon{
+
+    color:#C97A40;
+
+    margin-bottom:22px;
+
+}
+
+.upload-card h3{
+
+    font-size:28px;
+
+    margin-bottom:10px;
+
+}
+
+.upload-card p{
+
+    color:#666154;
+
+    margin-bottom:10px;
+
+}
+
+.upload-card span{
+
+    color:#A09687;
+
+    font-size:14px;
+
+}
+
+/* =========================
+     FILE NAME
+========================= */
+
+.selected-file{
+
+    margin-top:22px;
+
+    text-align:center;
+
+    font-weight:700;
+
+    color:#5E6B3F;
+
+}
+
+/* =========================
+      CONTROLS
+========================= */
+
+.controls{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    gap:24px;
+
+    margin-top:35px;
+
+    flex-wrap:wrap;
+
+}
+
+.select-wrapper{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.select-wrapper label{
+
+    font-size:14px;
+
+    color:#666154;
+
+}
+
+select{
+
+    width:230px;
+
+    padding:15px 18px;
+
+    border-radius:12px;
+
+    border:1px solid #D9D0C3;
+
+    background:white;
+
+    font-size:15px;
+
+    outline:none;
+
+}
+
+select:focus{
+
+    border-color:#5E6B3F;
+
+}
+
+button{
+
+    background:#C97A40;
+
+    color:white;
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:16px 36px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#AF6734;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+
+        0 10px 24px rgba(201,122,64,.28);
+
+}
+
+button:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+}
+/* ==========================================================
+                    LOADING SECTION
+========================================================== */
+
+.loading{
+
+    text-align:center;
+
+    margin:70px 0;
+
+}
+
+.loader{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    border:7px solid #E8DFD1;
+
+    border-top:7px solid #C97A40;
+
+    border-radius:50%;
+
+    animation:spin .8s linear infinite;
+
+}
+
+.loading h2{
+
+    margin-top:30px;
+
+    font-size:30px;
+
+}
+
+.loading p{
+
+    margin-top:12px;
+
+    color:#666154;
+
+    width:65%;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+    line-height:1.8;
+
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ==========================================================
+                    RESULTS
+========================================================== */
+
+.results{
+
+    margin-top:70px;
+
+    animation:fadeUp .45s ease;
+
+}
+
+.results-header{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.results-header h2{
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+.results-header p{
+
+    color:#666154;
+
+}
+
+/* ==========================================================
+                    GRID
+========================================================== */
+
+.results-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+/* ==========================================================
+                    CARDS
+========================================================== */
+
+.card{
+
+    background:#FFFDF9;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    border:1px solid #E7DDCF;
+
+    box-shadow:
+
+        0 10px 30px rgba(0,0,0,.05);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+        0 18px 40px rgba(0,0,0,.08);
+
+}
+
+.card h3{
+
+    color:#5E6B3F;
+
+    margin-bottom:18px;
+
+    font-size:22px;
+
+}
+
+/* ==========================================================
+                    FULL WIDTH CARD
+========================================================== */
+
+.full-width{
+
+    margin-top:28px;
+
+}
+
+/* ==========================================================
+                    KEY PHRASES
+========================================================== */
+
+#keyPhrases{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+.tag{
+
+    background:#ECE3D6;
+
+    color:#5E6B3F;
+
+    padding:10px 16px;
+
+    border-radius:999px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    transition:.25s;
+
+}
+
+.tag:hover{
+
+    transform:scale(1.05);
+
+    background:#E2D6C7;
+
+}
+
+/* ==========================================================
+                    ENTITY CARDS
+========================================================== */
+
+#entities{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.entity{
+
+    background:#FBF9F5;
+
+    border:1px solid #E7DDCF;
+
+    border-radius:14px;
+
+    padding:15px;
+
+    transition:.3s;
+
+}
+
+.entity:hover{
+
+    border-color:#C97A40;
+
+    transform:translateX(3px);
+
+}
+
+.entity strong{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    font-size:15px;
+
+    color:#2F3127;
+
+}
+
+.entity span{
+
+    color:#666154;
+
+    font-size:14px;
+
+}
+
+/* ==========================================================
+                    TEXT OUTPUT
+========================================================== */
+
+#translation,
+#originalText{
+
+    white-space:pre-wrap;
+
+    line-height:1.9;
+
+    color:#4C4A45;
+
+    max-height:420px;
+
+    overflow-y:auto;
+
+    padding-right:10px;
+
+}
+
+/* ==========================================================
+                    DETAILS
+========================================================== */
+
+details{
+
+    width:100%;
+
+}
+
+details summary{
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#5E6B3F;
+
+    list-style:none;
+
+    margin-bottom:18px;
+
+}
+
+details summary::-webkit-details-marker{
+
+    display:none;
+
+}
+
+details summary::before{
+
+    content:"▶ ";
+
+    color:#C97A40;
+
+}
+
+details[open] summary::before{
+
+    content:"▼ ";
+
+}
+/* ==========================================================
+                    FOOTER
+========================================================== */
+
+footer{
+
+    margin-top:80px;
+
+    padding:35px 0;
+
+    border-top:1px solid #E7DDCF;
+
+    text-align:center;
+
+}
+
+footer p{
+
+    color:#666154;
+
+    line-height:1.8;
+
+}
+
+footer strong{
+
+    color:#5E6B3F;
+
+    font-weight:700;
+
+}
+
+.copyright{
+
+    margin-top:10px;
+
+    font-size:14px;
+
+    color:#9A907F;
+
+}
+
+/* ==========================================================
+                    ERROR POPUP
+========================================================== */
+
+.error-box{
+
+    position:fixed;
+
+    top:25px;
+
+    right:25px;
+
+    background:#C04E36;
+
+    color:white;
+
+    padding:16px 22px;
+
+    border-radius:14px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+
+    z-index:9999;
+
+    animation:slideDown .35s ease;
+
+}
+
+@keyframes slideDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+                    FADE ANIMATION
+========================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.results{
+
+    animation:fadeUp .45s ease;
+
+}
+
+/* ==========================================================
+                    HIDDEN
+========================================================== */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+/* ==========================================================
+                    RESPONSIVE
+========================================================== */
+
+@media (max-width:992px){
+
+.hero h1{
+
+    font-size:48px;
+
+}
+
+.hero-text{
+
+    width:100%;
+
+}
+
+.results-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.controls{
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+}
+
+.select-wrapper{
+
+    width:100%;
+
+}
+
+select,
+button{
+
+    width:100%;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.container{
+
+    width:94%;
+
+}
+
+.logo{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.hero{
+
+    margin-bottom:50px;
+
+}
+
+.hero h1{
+
+    font-size:38px;
+
+}
+
+.hero-text{
+
+    font-size:16px;
+
+}
+
+.features{
+
+    gap:10px;
+
+}
+
+.features span{
+
+    font-size:13px;
+
+    padding:9px 14px;
+
+}
+
+.upload-card{
+
+    padding:40px 20px;
+
+}
+
+.upload-card h3{
+
+    font-size:22px;
+
+}
+
+.section-heading h2{
+
+    font-size:30px;
+
+}
+
+.results-header h2{
+
+    font-size:30px;
+
+}
+
+.card{
+
+    padding:22px;
+
+}
+
+.loader{
+
+    width:58px;
+
+    height:58px;
+
+}
+
+.loading h2{
+
+    font-size:24px;
+
+}
+
+.loading p{
+
+    width:100%;
+
+}
+
+footer{
+
+    font-size:14px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.hero h1{
+
+    font-size:32px;
+
+}
+
+.logo h2{
+
+    font-size:28px;
+
+}
+
+.upload-card{
+
+    border-radius:18px;
+
+}
+
+.card{
+
+    border-radius:16px;
+
+}
+
+button{
+
+    padding:15px;
+
+}
+
+}

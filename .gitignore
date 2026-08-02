@@ -1,0 +1,14 @@
+# Secrets - NEVER commit these
+.env
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Uploaded / temp files
+uploads/
+
+# OS / editor
+.DS_Store
+.vscode/
